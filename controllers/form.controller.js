@@ -1,6 +1,9 @@
 'use strict';
 var Survey = require('../models/form.model.js');
 exports.inputSurvey = function(req,res){
+	if(req.body['nim'] == ""){
+		res.redirect("/?msg=nim tidak boleh kosong");
+	}
 	var data = new Survey({
 		'nim' : req.body['nim'],
 		'date' : {type:Date, default: Date.now},

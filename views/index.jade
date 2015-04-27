@@ -1,7 +1,14 @@
 extends layout
 
 block content
+	script(type="text/javascript")
+		var msg = !{JSON.stringify(msg)};
+
 	form#form-survey.center-block(action="/form/submit" method="post")
+		if msg != ""
+			.alert.alert-danger.alert-dismissable= msg
+				button.close(data-dismiss = "alert" aria-label="Close")
+					span(area-hidden="true") &times;
 		h2.form-survey-heading= title
 		.form-group
 			label(for="nim") NIM
