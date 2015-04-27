@@ -25,3 +25,13 @@ exports.inputSurvey = function(req,res){
 		console.log("input success");
 	})
 }
+exports.getByNim = function(id, callback){
+	Survey.findOne({nim: id}, function(err, data){
+		if(err) return console.error(err);
+		if(data != null){
+			callback(data);
+		}else{
+			callback(null);
+		}
+	});
+}
