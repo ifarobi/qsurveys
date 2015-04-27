@@ -22,7 +22,7 @@ excelParser(path.join(__dirname,'public','data.xlsx'), function(err, data){
 });
 
 // connecting to database
-mongoose.connect('mongodb://localhost/excelNilai');
+mongoose.connect('mongodb://qsurvey:qsurveyMongo@ds055689.mongolab.com:55689/qsurvey');
 var db = mongoose.connection;
 // db.on('error', console.error.bind(console, 'connection error : '));
 // db.once('open', console.log.bind(console, 'yay'));
