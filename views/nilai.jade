@@ -2,32 +2,29 @@ extends layout
 
 block content
 	#nilai-container.center-block
-		if nim == null
-			h2 Nim Tidak Ditemukan
-		else
-			table.table
-				tr
-					th NIM
-					th NAMA
-					th KELAS
-					th ASISTEN
-					th MODUL 1
-					th MODUL 2
-					th MODUL 3
-					th MODUL 4
-					th MODUL 5
-					th MODUL 6
-					th NILAI AKHIR
-				tr
-					td=nilai.nim
-					td=nilai.name
-					td=nilai.class
-					td=nilai.assistant
-					td=nilai.m1
-					td=nilai.m2
-					td=nilai.m3
-					td=nilai.m4
-					td=nilai.m5
-					td=nilai.m6
-					td=nilai.na
+		table.table
+			tr
+				th NIM
+				th NAMA
+				th KELAS
+				th ASISTEN
+				th MODUL 1
+				th MODUL 2
+				th MODUL 3
+				th MODUL 4
+				th MODUL 5
+				th MODUL 6
+				th NILAI AKHIR
+			tr
+				td=nilai.nim
+				td=nilai.name
+				td=nilai.class
+				td=nilai.assistant
+				td=nilai.m1
+				td=nilai.m2
+				td=nilai.m3
+				td=nilai.m4
+				td=nilai.m5
+				td=nilai.m6
+				td=nilai.na
 		a.btn.btn-primary(href="/") Kembali
