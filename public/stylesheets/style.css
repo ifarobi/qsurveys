@@ -1,0 +1,30 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #34495e;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#form-survey, #nilai-container{
+	width: 700px;
+	background: white;
+	padding: 20px;
+	border-radius: 3px;
+	box-shadow:0 0 50px rgba(0,0,0,.5);
+}
+#nilai-container{
+	width: 960px;
+}
+
+#form-survey h2, #form-survey table tr td{
+	text-align: center;
+}
+#form-survey table tr td:nth-child(1){
+	text-align:left;
+}
+#form-survey textarea{
+	resize: none;
+}

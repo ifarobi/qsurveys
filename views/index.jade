@@ -1,0 +1,164 @@
+extends layout
+
+block content
+	form#form-survey.center-block(action="/form/submit" method="post")
+		h2.form-survey-heading= title
+		.form-group
+			label(for="nim") NIM
+			input#nim.form-control(type="text" placeholder="Masukan NIM" name="nim")
+		table(class="table table-striped")
+			tr
+				td
+				td Sangat Setuju
+				td Setuju
+				td Biasa Saja
+				td Tidak Setuju
+				td Sangat Tidak Setuju
+			tr
+				td Materi praktikum sesuai dengan materi di kelas
+				td 
+					input(type="radio" name="surv-1" value="5")
+				td 
+					input(type="radio" name="surv-1" value="4")
+				td 
+					input(type="radio" name="surv-1" value="3")
+				td 
+					input(type="radio" name="surv-1" value="2")
+				td 
+					input(type="radio" name="surv-1" value="1")
+			tr
+				td Saya mampu mengaplikasikan pengetahuan yang diperoleh di praktikum
+				td 
+					input(type="radio" name="surv-2" value="5")
+				td 
+					input(type="radio" name="surv-2" value="4")
+				td 
+					input(type="radio" name="surv-2" value="3")
+				td 
+					input(type="radio" name="surv-2" value="2")
+				td 
+					input(type="radio" name="surv-2" value="1")
+			tr
+				td Praktikum mendorong saya untuk dapat kreatif menyelesaikan masalah
+				td 
+					input(type="radio" name="surv-3" value="5")
+				td 
+					input(type="radio" name="surv-3" value="4")
+				td 
+					input(type="radio" name="surv-3" value="3")
+				td 
+					input(type="radio" name="surv-3" value="2")
+				td 
+					input(type="radio" name="surv-3" value="1")
+			tr
+				td Tahapan praktikum tertata rapi dan mudah dipahami
+				td 
+					input(type="radio" name="surv-4" value="5")
+				td 
+					input(type="radio" name="surv-4" value="4")
+				td 
+					input(type="radio" name="surv-4" value="3")
+				td 
+					input(type="radio" name="surv-4" value="2")
+				td 
+					input(type="radio" name="surv-4" value="1")
+			tr
+				td Modul praktikum aplikatif (bermanfaat)
+				td 
+					input(type="radio" name="surv-5" value="5")
+				td 
+					input(type="radio" name="surv-5" value="4")
+				td 
+					input(type="radio" name="surv-5" value="3")
+				td 
+					input(type="radio" name="surv-5" value="2")
+				td 
+					input(type="radio" name="surv-5" value="1")
+			tr
+				td Asisten mampu menjelaskan materi praktikum dengan baik
+				td 
+					input(type="radio" name="surv-6" value="5")
+				td 
+					input(type="radio" name="surv-6" value="4")
+				td 
+					input(type="radio" name="surv-6" value="3")
+				td 
+					input(type="radio" name="surv-6" value="2")
+				td 
+					input(type="radio" name="surv-6" value="1")
+			tr
+				td Asisten mampu menjawab pertanyaan dengan baik
+				td 
+					input(type="radio" name="surv-7" value="5")
+				td 
+					input(type="radio" name="surv-7" value="4")
+				td 
+					input(type="radio" name="surv-7" value="3")
+				td 
+					input(type="radio" name="surv-7" value="2")
+				td 
+					input(type="radio" name="surv-7" value="1")
+			tr
+				td Adanya diskusi dan interaksi dengan praktikan
+				td 
+					input(type="radio" name="surv-8" value="5")
+				td 
+					input(type="radio" name="surv-8" value="4")
+				td 
+					input(type="radio" name="surv-8" value="3")
+				td 
+					input(type="radio" name="surv-8" value="2")
+				td 
+					input(type="radio" name="surv-8" value="1")
+			tr
+				td Waktu yang disediakan cukup untuk tanya jawab dan diskusi
+				td 
+					input(type="radio" name="surv-9" value="5")
+				td 
+					input(type="radio" name="surv-9" value="4")
+				td 
+					input(type="radio" name="surv-9" value="3")
+				td 
+					input(type="radio" name="surv-9" value="2")
+				td 
+					input(type="radio" name="surv-9" value="1")
+			tr
+				td Peralatan laboratorium sudah memadai
+				td 
+					input(type="radio" name="surv-10" value="5")
+				td 
+					input(type="radio" name="surv-10" value="4")
+				td 
+					input(type="radio" name="surv-10" value="3")
+				td 
+					input(type="radio" name="surv-10" value="2")
+				td 
+					input(type="radio" name="surv-10" value="1")
+		.form-group
+			label(for="tbk-modul") Modul Terbaik
+			select#tbk-modul.form-control(name="tbk-modul")
+				option(value="Variabel & Tipe Data") Modul Variabel & Tipe Data
+				option(value="Pengkondisian & Switch") Modul Pengkondisian & Switch
+				option(value="Perulangan") Modul Perulangan
+				option(value="Method") Modul Method
+				option(value="Array") Modul Array
+				option(value="Konsep OOP") Modul Konsep OOP
+		.form-group
+			label(for="alasan-tbk-modul") Alasan Modul Terbaik
+			textarea#alasan-tbk-modul.form-control(name="alasan-tbk-modul")
+		.form-group
+			label(for="tsl-modul") Modul Tersulit
+			select#tsl-modul.form-control(name="tsl-modul")
+				option(value="Variabel & Tipe Data") Modul Variabel & Tipe Data
+				option(value="Pengkondisian & Switch") Modul Pengkondisian & Switch
+				option(value="Perulangan") Modul Perulangan
+				option(value="Method") Modul Method
+				option(value="Array") Modul Array
+				option(value="Konsep OOP") Modul Konsep OOP
+		.form-group
+			label(for="alasan-tsl-modul") Alasan Modul Tersulit
+			textarea#alasan-tsl-modul.form-control(name="alasan-tsl-modul")
+		.form-group
+			label(for="saran") Saran dan masukan lainnya
+			textarea#saran.form-control(name="saran")
+		input.btn.btn-primary(type="submit" value="Submit")
